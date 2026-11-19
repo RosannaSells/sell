@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seller Readiness Score | Las Vegas &amp; Henderson | Rosanna Sells Vegas</title>
+<meta name="description" content="Thinking about selling your Las Vegas or Henderson home? Take the free 2-minute Seller Readiness Score and get a personalized prep plan.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#A87E28; --gold-dk:#8C5F16; --black:#1A1A1A; --cream:#FAF0D2;
+  --ivory:#FFFCF4; --ink:#2b2b2b; --muted:#6d6658; --line:#e7dcc0;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Lato,system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--black);line-height:1.15}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:#fff;border-bottom:3px solid var(--gold);box-shadow:0 2px 14px rgba(26,26,26,.06)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+.brand img{height:48px}
+.brand .script{font-family:"Great Vibes",cursive;font-size:32px;color:var(--gold);line-height:1}
+.brand .caps{font-size:10px;letter-spacing:.38em;color:#fff;display:block;margin-top:2px}
+.brand .divider{width:1px;height:46px;background:var(--line)}
+.brand .brk{font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.logo-bee{display:block;width:122px;height:135px;flex:0 0 122px;background:url("https://rosannasells.github.io/ready/Gold%20Logos.png") -4px -47px/306px 306px no-repeat}
+.hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.logo-life{display:block;width:114px;height:78px;background:url("https://rosannasells.github.io/ready/Gold%20Logos.png") -118px -54px/233px 233px no-repeat}
+@media (max-width:560px){.logo-bee{width:90px;height:100px;flex:0 0 90px;background-position:-3px -35px;background-size:227px 227px}.logo-life{width:95px;height:65px;background-position:-98px -45px;background-size:194px 194px}}
+.hdr-phone{color:var(--black);font-size:14px;text-decoration:none;white-space:nowrap}
+.hdr-phone b{color:var(--gold-dk)}
+main{padding:34px 0 50px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(26,26,26,.06);padding:34px 30px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--gold-dk),var(--gold),#d6b46a)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);font-weight:700;margin-bottom:10px}
+.hero h1{font-size:clamp(32px,6vw,46px);margin-bottom:14px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.lede{font-size:17px;color:var(--muted);margin-bottom:22px;max-width:580px}
+.perks{list-style:none;display:grid;gap:10px;margin:0 0 26px}
+.perks li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.perks li:before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--black);color:#fff;border:2px solid var(--black);font:700 16px Lato,sans-serif;padding:15px 28px;border-radius:999px;cursor:pointer;transition:.2s;text-decoration:none}
+.btn:hover{background:var(--gold-dk);border-color:var(--gold-dk)}
+.btn.gold{background:var(--gold);border-color:var(--gold)}
+.btn.gold:hover{background:var(--gold-dk);border-color:var(--gold-dk)}
+.btn.ghost{background:transparent;color:var(--black)}
+.btn.ghost:hover{background:var(--cream);color:var(--black)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.micro{font-size:13px;color:var(--muted);margin-top:12px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.trust div{font-size:13px;color:var(--muted)}
+.trust b{display:block;font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--black);line-height:1}
+.progress{height:6px;background:var(--cream);border-radius:9px;overflow:hidden;margin-bottom:8px}
+.progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .35s}
+.qmeta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:22px}
+.qtitle{font-size:clamp(25px,4.6vw,32px);margin-bottom:6px}
+.qhelp{color:var(--muted);font-size:15px;margin-bottom:20px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:15px 16px;font:400 16px Lato,sans-serif;color:var(--ink);cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--gold);background:#fffaf0}
+.opt.sel{border-color:var(--gold);background:var(--cream);box-shadow:inset 0 0 0 1px var(--gold)}
+.opt .dot{flex:0 0 20px;height:20px;border-radius:50%;border:2px solid #cbbd98}
+.opt.multi .dot{border-radius:5px}
+.opt.sel .dot{border-color:var(--gold);background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/13px no-repeat}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:10px}
+.link{background:none;border:none;color:var(--muted);font:400 15px Lato,sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.teaser{display:grid;grid-template-columns:140px 1fr;gap:22px;align-items:center;margin-bottom:24px}
+.ring{width:140px;height:140px;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:700;color:var(--black);line-height:1}
+.ring .num small{font:400 12px Lato,sans-serif;color:var(--muted);letter-spacing:.1em;margin-top:4px}
+.blur{filter:blur(6px);user-select:none}
+.tier{display:inline-block;background:var(--black);color:var(--cream);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:8px}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:700;color:var(--black);display:block;margin-bottom:5px}
+input[type=text],input[type=email],input[type=tel],input[type=number]{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;font:16px Lato,sans-serif;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(168,126,40,.15)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--muted);line-height:1.45}
+.consent input{margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex:0 0 16px}
+.err{color:#a3341f;font-size:13px;min-height:1em}
+.lock{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.hp{position:absolute!important;left:-10000px!important;top:auto;width:1px;height:1px;overflow:hidden}
+.res-head{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;margin-bottom:26px}
+.res-head h2{font-size:clamp(26px,5vw,34px);margin-bottom:6px}
+.steps{list-style:none;counter-reset:s;display:grid;gap:14px;margin:8px 0 30px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:16px}
+.steps li:before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 18px "Cormorant Garamond",serif}
+.steps h3{font-size:21px;margin-bottom:3px}
+.steps p{font-size:15px;color:var(--muted)}
+.section-t{font-size:26px;margin:6px 0 4px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.calc-out{background:var(--black);color:#fff;border-radius:12px;padding:22px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline}
+.calc-out .big{font-family:"Cormorant Garamond",serif;font-size:44px;color:var(--gold);grid-column:1/-1;line-height:1}
+.calc-out span{font-size:14px;color:#cfc3a3}
+.calc-out b{font-size:15px;text-align:right}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+.cta-box{margin-top:30px;background:var(--cream);border:1px solid #e2cf9a;border-radius:var(--radius);padding:26px;text-align:center}
+.cta-box h3{font-size:28px;margin-bottom:6px}
+.cta-box p{color:var(--muted);margin-bottom:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.contact-line{margin-top:12px;font-size:14px;color:var(--ink)}
+footer{background:var(--black);color:#bdb29a;font-size:12px;padding:26px 0;text-align:center;line-height:1.7}
+footer b{color:var(--cream)}
+.eho{display:inline-flex;align-items:center;gap:6px;margin-top:6px}
+.hidden{display:none!important}
+.fade{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.spinner{width:46px;height:46px;border:4px solid var(--cream);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite;margin:10px auto 18px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:600px){
+  .card{padding:28px 20px}
+  .row,.calc{grid-template-columns:1fr}
+  .teaser,.res-head{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .brand .brk,.brand .divider{display:none}
+  .hdr-phone{font-size:13px}
+}
+.alt{display:block;margin-top:14px;font-size:14px;color:var(--muted)}
+.alt a{color:var(--gold-dk);font-weight:700}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand" id="brand">
+      <span class="logo-bee" role="img" aria-label="Rosanna Sells Vegas"></span>
+    </div>
+    <div class="hdr-right">
+      <span class="logo-life" role="img" aria-label="LIFE Realty District"></span>
+      <a class="hdr-phone" href="tel:7023284816">Call/Text <b>702.328.4816</b></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <section class="card hero fade" id="s-intro">
+    <div class="eyebrow">Free · 2 Minutes · Southern Nevada Homeowners</div>
+    <h1>Thinking about selling? <em>See how ready you really are.</em></h1>
+    <p class="lede">Answer 8 quick questions and get your Seller Readiness Score, plus a prep plan built around your home, your timing and your next move. No pressure, no obligation.</p>
+    <ul class="perks">
+      <li>Your personal readiness score and what it means</li>
+      <li>The 3–4 moves that matter most before you list</li>
+      <li>Prep and staging priorities that help a home show its best</li>
+      <li>A clear way to think about timing your sale and your next home</li>
+    </ul>
+    <button class="btn gold" id="startBtn">Get My Seller Score →</button>
+    <p class="micro">Takes about 2 minutes. Your answers stay private.</p>
+    <div class="trust">
+      <div><b>14+</b>years selling homes</div>
+      <div><b>100+</b>homes closed</div>
+      <div><b>Staging</b>&amp; design background</div>
+      <div><b>Las Vegas</b>native</div>
+    </div>
+  </section>
+
+  <section class="card hidden" id="s-quiz">
+    <div class="progress"><span id="bar"></span></div>
+    <div class="qmeta"><span id="qcount">Question 1 of 8</span><span id="qpct">0%</span></div>
+    <div id="qbody" class="fade"></div>
+    <div class="qnav">
+      <button class="link" id="backBtn">← Back</button>
+      <button class="btn" id="nextBtn" disabled>Next →</button>
+    </div>
+  </section>
+
+  <section class="card hidden" id="s-calc" style="text-align:center">
+    <div class="spinner"></div>
+    <h2 style="font-size:28px">Building your prep plan…</h2>
+    <p class="micro" id="calcMsg">Reviewing your timing and next move</p>
+  </section>
+
+  <section class="card hidden fade" id="s-gate">
+    <div class="teaser">
+      <div class="ring" id="ringTeaser"></div>
+      <div>
+        <div class="tier" id="tierTeaser">—</div>
+        <h2 style="font-size:clamp(25px,4.8vw,32px);margin-bottom:6px">Your score is ready.</h2>
+        <p class="lede" style="margin:0;font-size:16px">Tell me where to send it and you'll see your full score and your personalized prep plan right away.</p>
+      </div>
+    </div>
+    <form id="leadForm" novalidate>
+      <div class="row">
+        <div><label for="fname">First name</label><input type="text" id="fname" autocomplete="given-name" required></div>
+        <div><label for="lname">Last name</label><input type="text" id="lname" autocomplete="family-name"></div>
+      </div>
+      <div class="row">
+        <div><label for="email">Email</label><input type="email" id="email" autocomplete="email" required></div>
+        <div><label for="phone">Mobile phone</label><input type="tel" id="phone" autocomplete="tel" placeholder="(702) 555-0123" required></div>
+      </div>
+      <div><label for="street">Property street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input type="text" id="street" autocomplete="street-address" placeholder="So I can tailor your plan to your neighborhood"></div>
+      <div class="hp" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="consent"><input type="checkbox" id="consent">
+        <span>Yes, Rosanna Bieszczat with LIFE Realty District may contact me by call, text, or email about selling my home, including by automated means. Consent isn't a condition of any purchase or sale. Msg &amp; data rates may apply. Reply STOP to opt out.</span>
+      </label>
+      <div class="err" id="formErr"></div>
+      <button class="btn gold" type="submit" id="submitBtn">Show My Score &amp; Prep Plan →</button>
+      <div class="lock">🔒 Your information is never sold or shared with third parties.</div>
+    </form>
+  </section>
+
+  <section class="card hidden fade" id="s-results">
+    <div class="res-head">
+      <div class="ring" id="ringFull"></div>
+      <div>
+        <div class="tier" id="tierFull">—</div>
+        <h2 id="resTitle">—</h2>
+        <p id="resSummary" style="color:var(--muted)"></p>
+      </div>
+    </div>
+
+    <h3 class="section-t">Your prep plan</h3>
+    <ol class="steps" id="steps"></ol>
+
+    <div class="cta-box">
+      <h3>Let's walk through your home together.</h3>
+      <p>Book a free Home Prep &amp; Pricing Walk-Through. I'll tour your home with you, point out the few updates worth doing (and the ones to skip), and prepare a market analysis based on recent sales near you. No pressure, no obligation.</p>
+      <div class="cta-row">
+        <a class="btn gold" id="bookBtn" href="#" target="_blank" rel="noopener">Book My Free Walk-Through</a>
+        <a class="btn ghost" href="sms:7023284816">Text Rosanna</a>
+      </div>
+      <span class="alt">Want a ballpark first? <a id="valueLink" href="#" target="_blank" rel="noopener">See your home's automated value estimate →</a></span>
+      <p class="contact-line">Or call/text <b>702.328.4816</b> · RosannaSellsVegas@gmail.com</p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Rosanna Bieszczat, REALTOR®</b> · LIFE Realty District · NV DRE# S.0174211<br>
+    2225 Villagewalk Dr, Suite 260, Henderson, NV 89052 · 702.328.4816 · RosannaSellsVegas.com<br>
+    This tool is for educational purposes only. It doesn't estimate your home's value and isn't legal, tax, or financial advice. Automated value estimates are provided by a third party and aren't an appraisal. If your home is currently listed with another brokerage, this isn't a solicitation of that listing.<br>
+    <span class="eho">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#bdb29a" d="M12 2 1 11h3v11h16V11h3L12 2zm5 17H7v-8l5-4.2 5 4.2v8zM9 13h6v1.6H9zm0 3h6v1.6H9z"/></svg>
+      Equal Housing Opportunity
+    </span>
+  </div>
+</footer>
+
+<script>
+const CONFIG = {
+  WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbwiLOQB74gv9iWyqMc_0KtU4E_cuqBbJnVY9XLtUYnQufr7C2PiAYa8AD4TWBGvuVs6/exec",
+  BOOKING_URL: "https://www.rosannasellsvegas.com",
+  VALUE_URL: "https://hmbt.co/WxKFgt",
+  SOURCE_TAG: "Seller Readiness Score",
+  MIN_SECONDS: 8
+};
+
+const Q = [
+  { id:"timeline", t:"When would you ideally like to be moved?", h:"No wrong answers. This just shapes your plan.",
+    o:[["Within 3 months",20,"0-3"],["3–6 months",16,"3-6"],["6–12 months",10,"6-12"],["Just exploring my options",4,"12+"]]},
+  { id:"next", t:"Where are you headed after you sell?", h:"Your next move changes how we time everything.",
+    o:[["Buying another home in Southern Nevada",15,"buy-local"],["Moving out of state",15,"out-of-state"],["Renting for a while",12,"rent"],["Not sure yet",5,"unsure"]]},
+  { id:"sequence", t:"If you're buying next, do you know how you'll time the two moves?", h:"Sell first, buy first, or both at once. Each has trade-offs.",
+    o:[["Yes, I have a plan",10,"planned"],["I have a rough idea",6,"rough"],["Not yet, that part worries me",2,"none"],["I'm not buying another home",10,"n/a"]]},
+  { id:"equity", t:"Do you know roughly what you owe and what homes like yours sell for?", h:"A ballpark is fine. It helps you plan your next step.",
+    o:[["Yes, I have a good sense of both",20,"both"],["I know what I owe, not what it would sell for",12,"owe-only"],["I know recent sales, not my payoff",12,"value-only"],["Not really sure on either",4,"neither"]]},
+  { id:"condition", t:"How would you describe your home's condition today?", h:"Every home can sell. This tells us where to focus.",
+    o:[["Updated and well kept, ready to show",20,"ready"],["Good shape, a few small projects",15,"small"],["Needs some updates",9,"updates"],["Needs major work",5,"major"]]},
+  { id:"prep", t:"How do you feel about prepping for photos and showings?", h:"Decluttering, touch-ups, staging, that kind of thing.",
+    o:[["I'm ready to do what it takes",15,"all-in"],["Happy to, with a clear plan",12,"guided"],["I'd rather do as little as possible",6,"minimal"],["I'd prefer to sell as-is",6,"as-is"]]},
+  { id:"worry", t:"What's your biggest concern about selling?", h:"Pick the one that's on your mind most.",
+    o:[["Timing my sale with my next move",0,"timing"],["Getting the right price",0,"price"],["Repairs and getting the home ready",0,"repairs"],["Keeping the home show-ready while living in it",0,"showings"],["The paperwork and the process",0,"process"]]},
+  { id:"area", t:"Where is your home?", h:"So your plan reflects your part of the valley.",
+    o:[["Henderson / Green Valley / Seven Hills",0,"Henderson"],["Westwood Village (Henderson 89074)",0,"Westwood Village"],["Inspirada",0,"Inspirada"],["Summerlin",0,"Summerlin"],["Las Vegas (Central & Southwest)",0,"Las Vegas"],["Lake Las Vegas",0,"Lake Las Vegas"],["Boulder City",0,"Boulder City"],["Somewhere else in Southern Nevada",0,"Other"]]}
+];
+const TOTAL = Q.length;
+
+let i = 0; const A = {};
+let startedAt = Date.now(); let leadSent = false;
+const $ = id => document.getElementById(id);
+const show = id => { ["s-intro","s-quiz","s-calc","s-gate","s-results"].forEach(s=>$(s).classList.add("hidden")); $(id).classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); };
+
+$("bookBtn").href = CONFIG.BOOKING_URL;
+$("valueLink").href = CONFIG.VALUE_URL;
+
+$("startBtn").onclick = () => { startedAt = Date.now(); show("s-quiz"); render(); };
+$("backBtn").onclick = () => { if (i===0){ show("s-intro"); return;} i--; render(); };
+$("nextBtn").onclick = next;
+
+function render(){
+  const q = Q[i];
+  $("bar").style.width = (i/TOTAL*100)+"%";
+  $("qcount").textContent = `Question ${i+1} of ${TOTAL}`;
+  $("qpct").textContent = Math.round(i/TOTAL*100)+"%";
+  const sel = A[q.id];
+  $("qbody").innerHTML = `<h2 class="qtitle">${q.t}</h2><p class="qhelp">${q.h}</p><div class="opts">${
+    q.o.map((o,k)=>`<button class="opt ${sel===k?'sel':''}" data-k="${k}"><span class="dot"></span>${o[0]}</button>`).join("")
+  }</div>`;
+  $("qbody").classList.remove("fade"); void $("qbody").offsetWidth; $("qbody").classList.add("fade");
+  $("nextBtn").disabled = sel===undefined;
+  $("nextBtn").textContent = i===TOTAL-1 ? "See My Score →" : "Next →";
+  $("qbody").querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ A[q.id]=+b.dataset.k; render(); setTimeout(next,260); });
+}
+function next(){
+  if (A[Q[i].id]===undefined) return;
+  if (i<TOTAL-1){ i++; render(); } else calculate();
+}
+
+const val = id => { const q=Q.find(x=>x.id===id); return q.o[A[id]][2]; };
+const label = id => { const q=Q.find(x=>x.id===id); return q.o[A[id]][0]; };
+function score(){ return ["timeline","next","sequence","equity","condition","prep"].reduce((s,id)=>{const q=Q.find(x=>x.id===id);return s+q.o[A[id]][1];},0); }
+function tier(s){
+  if (s>=75) return {label:"Ready to List",title:"You're in a strong position to sell.",
+    sum:"You've thought through the big pieces already. Now it's about sharpening the details, from prep to pricing to launch, so your home makes a great first impression."};
+  if (s>=50) return {label:"Almost There",title:"You're close. A few smart moves will make a big difference.",
+    sum:"You have a solid start. Closing a couple of gaps now means fewer surprises later and a smoother path from listing day to closing day."};
+  return {label:"Planning Ahead",title:"Starting early is the smartest move a seller can make.",
+    sum:"The sellers with the least stress are the ones who plan before they're in a rush. Here's a clear, realistic path from today to a sale you feel good about."};
+}
+function priority(s){
+  const t = val("timeline");
+  if ((t==="0-3"||t==="3-6") && s>=55) return "P1";
+  if (t!=="12+") return "P2";
+  return "P3";
+}
+function plan(){
+  const st=[];
+  const nx=val("next"), sq=val("sequence"), eq=val("equity"), cond=val("condition"), prep=val("prep"), worry=val("worry"), t=val("timeline");
+  if (eq!=="both"||worry==="price") st.push(["Get a real pricing picture, not a guess",
+    "Online estimates are a starting point, but they can't see your upgrades, your lot or your street. A market analysis built on recent sales near you shows where your home really fits, and your lender or loan servicer can confirm your payoff."]);
+  if (nx==="buy-local" && sq!=="planned") st.push(["Decide: sell first, buy first, or both at once",
+    "Each path has trade-offs between cost, convenience and stress. We'll look at your numbers and your timeline and choose the sequence that fits you. If you're buying next, a quick conversation with a lender early on makes this much easier."]);
+  if (nx==="out-of-state") st.push(["Plan a sale you can manage from a distance",
+    "If you're moving away, we can set things up so showings, inspections and closing paperwork don't require you to be here for every step."]);
+  if (cond==="updates"||cond==="major"||worry==="repairs") st.push(["Focus on the updates that buyers notice",
+    "Not every project pays off before a sale. Paint, lighting, fixtures and small repairs often matter more than big remodels. We'll walk the home together and sort it into must-do, nice-to-have and skip."]);
+  if (prep==="as-is") st.push(["Know your as-is options",
+    "Selling as-is is a valid path. Pricing and marketing just work differently. We'll compare what an as-is sale and a lightly prepped sale could look like so you can choose with clear eyes."]);
+  else if (cond==="ready"||cond==="small") st.push(["Stage it to show its best",
+    "Homes that photograph well get more clicks, more showings and stronger first impressions. With my staging background, we'll use what you already have to make each room feel open, bright and easy to picture living in."]);
+  if (worry==="showings") st.push(["Make showings easy on your life",
+    "A simple daily reset routine, grouped showing windows and a plan for pets and valuables keep the home ready without turning your days upside down."]);
+  if (worry==="process"||worry==="timing"||st.length<3) st.push(["Map the timeline from prep to closing",
+    "From pre-listing prep to photos, offers, inspection and closing day, knowing what's coming takes the stress out of it. I'll lay out every step and what you'll need to do at each one."]);
+  st.push([t==="12+"?"Start a low-key prep list now":"Book a walk-through before you lift a paintbrush",
+    t==="12+"?"Small projects done over time are easier on your budget and your schedule. When you're ready, the home will be too.":"Before you spend money on projects, let's walk the home together so every dollar and weekend goes where it counts."]);
+  return st.slice(0,4);
+}
+
+function ring(el,s,blur){
+  const r=60,c=2*Math.PI*r;
+  el.innerHTML=`<svg width="140" height="140"><circle cx="70" cy="70" r="${r}" fill="none" stroke="#FAF0D2" stroke-width="12"/>
+  <circle id="${el.id}-arc" cx="70" cy="70" r="${r}" fill="none" stroke="#A87E28" stroke-width="12" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}" style="transition:stroke-dashoffset 1.2s ease"/></svg>
+  <div class="num ${blur?'blur':''}">${s}<small>OUT OF 100</small></div>`;
+  requestAnimationFrame(()=>setTimeout(()=>{ $(el.id+"-arc").style.strokeDashoffset = c*(1-s/100); },60));
+}
+
+let S,T;
+function calculate(){
+  $("bar").style.width="100%";
+  show("s-calc");
+  const msgs=["Reviewing your timing and next move","Looking at your home's condition","Putting your prep plan together"];
+  let m=0; const iv=setInterval(()=>{ m++; if(m<msgs.length) $("calcMsg").textContent=msgs[m]; },650);
+  setTimeout(()=>{ clearInterval(iv);
+    S=score(); T=tier(S);
+    ring($("ringTeaser"),S,true);
+    $("tierTeaser").textContent=T.label;
+    show("s-gate");
+  },2000);
+}
+
+$("leadForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  if (leadSent) return;
+  const f=$("fname").value.trim(), em=$("email").value.trim(), ph=$("phone").value.replace(/\D/g,"");
+  if(!f) return $("formErr").textContent="Please add your first name.";
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return $("formErr").textContent="Please enter a valid email.";
+  if(ph.length<10) return $("formErr").textContent="Please enter a 10-digit mobile number.";
+  $("formErr").textContent="";
+  leadSent = true;
+  $("submitBtn").disabled=true; $("submitBtn").textContent="One moment…";
+
+  const isBot = $("website").value.trim() !== "" || (Date.now()-startedAt) < CONFIG.MIN_SECONDS*1000;
+
+  const lead = {
+    source: CONFIG.SOURCE_TAG,
+    submitted_at: new Date().toISOString(),
+    page: location.href,
+    first_name: f, last_name: $("lname").value.trim(), email: em, phone: ph,
+    property_address: $("street").value.trim(),
+    contact_consent: $("consent").checked,
+    readiness_score: S, readiness_tier: T.label, lead_priority: priority(S),
+    timeline: label("timeline"), next_move: label("next"), move_sequence: label("sequence"),
+    equity_awareness: label("equity"), home_condition: label("condition"), prep_attitude: label("prep"),
+    biggest_concern: label("worry"), area: label("area")
+  };
+  if (isBot) {
+    console.log("Submission filtered as spam.");
+  } else if (CONFIG.WEBHOOK_URL){
+    try{ await fetch(CONFIG.WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(lead)}); }catch(err){ console.warn("Lead send failed",err); }
+  } else { console.log("[Preview mode] Lead not sent:", lead); }
+  showResults(f);
+});
+
+function showResults(first){
+  ring($("ringFull"),S,false);
+  $("tierFull").textContent=T.label;
+  $("resTitle").textContent = `${first}, ${T.title.charAt(0).toLowerCase()+T.title.slice(1)}`;
+  $("resSummary").textContent=T.sum;
+  $("steps").innerHTML=plan().map(s=>`<li><div><h3>${s[0]}</h3><p>${s[1]}</p></div></li>`).join("");
+  show("s-results");
+}
+</script>
+</body>
+</html>
